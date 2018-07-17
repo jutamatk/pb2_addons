@@ -1454,7 +1454,7 @@ result = pd.pivot_table(df, index=groupby,
                                'L13': 'invoice_move_line_id${value and value.debit - value.credit or 0}#{number_format=number}',
                                'M13': 'invoice_move_line_id.name${value or ""}',
                                'N13': 'invoice_move_line_id.move_id.narration${value or ""}',
-                               'O13': 'invoice_move_line_id.doctype${value and dict(in_invoice="Supplier Invoice", in_refund="Supplier Refund", adjustment="Adjustment")[value] or ""}',
+                               'O13': 'invoice_move_line_id.prefix_doctype${value or ""}',
                                'P13': 'invoice_move_line_id.journal_id.name${value or ""}',
                                'Q13': 'invoice_move_line_id.move_id.name${value or ""}',
                                'R13': "${'=IF((?(Q13)&lt;&gt;?(Q12)),1,?(R12)+1)'}",
@@ -1497,7 +1497,6 @@ result = pd.pivot_table(df, index=groupby,
            </field>
        </record>
 
-<<<<<<< HEAD
        # Status Cheque Inventory Report
       <record id="xlsx_report_status_cheque_inventory" model="ir.attachment">
           <field name="res_model">xlsx.report.status.cheque.inventory</field>
@@ -1542,7 +1541,6 @@ result = pd.pivot_table(df, index=groupby,
           </field>
       </record>
 
-=======
        # Allowance for Doubtful Accounts Report
        <record id="xlsx_report_gl_allowance_doubtful_accounts" model="ir.attachment">
            <field name="res_model">xlsx.report.gl.allowance.doubtful.accounts</field>
@@ -1576,6 +1574,5 @@ result = pd.pivot_table(df, index=groupby,
                }
            </field>
        </record>
->>>>>>> 924341ea4a5a861c3b7209e44d7d9f51df5337ba
     </data>
 </openerp>
