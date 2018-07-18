@@ -30,7 +30,7 @@
 
         <menuitem id="menu_xlsx_report_gl_payable"
             name="GL Payable"
-            parent="menu_pabi_payable_report"
+            parent="menu_pabi_general_ledger_report"
             action="action_xlsx_report_gl_payable_form"
             sequence="60"/>
     </data>
